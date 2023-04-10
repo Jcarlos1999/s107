@@ -52,3 +52,15 @@ jobs:
         with:
           name: arquivo jar
           path: devops/target/*.jar
+
+  Shell-script:
+
+    runs-on: ubuntu-latest
+
+    needs: Build
+    steps:
+    - name: Execução de scripts externos
+      uses: actions/checkout@v3
+      run: sh script/script.sh
+      env:
+        EMAIL: joao.c.23@live.com
