@@ -61,6 +61,6 @@ jobs:
     steps:
     - name: Execução de scripts externos
       uses: actions/checkout@v3
-      run: sh script/script.sh
+    - run: sh script/script.sh
       env:
         EMAIL: joao.c.23@live.com
